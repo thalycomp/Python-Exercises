@@ -8,11 +8,8 @@ try:
     letter = input("Letra > ")
 
     def contagem(palavra, letter):
-        contagem = 0
-        for letra in palavra:
-            if letra == letter:
-                contagem = contagem + 1
-        return contagem
+        word = list(palavra);
+        contagem = word.count(letter)
 
     resultado = contagem(palavra, letter)
     print(resultado)
