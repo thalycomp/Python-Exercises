@@ -7,12 +7,9 @@ try:
     palavra = input("Palavra > ")
     letter = input("Letra > ")
 
-    def contagem(palavra, letter):
-        word = list(palavra);
-        contagem = word.count(letter)
+    def contagem(palavra, letra):
+        print(palavra.count(letra))
 
-    resultado = contagem(palavra, letter)
-    print(resultado)
-
+    contagem(palavra, letter)
 except:
-    input("Valor inválido!")
+    input("Valor inválido! ")
