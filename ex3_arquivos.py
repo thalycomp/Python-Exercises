@@ -36,4 +36,4 @@ cont = 0
 for linha in arquivo:
     cont += 1
 
-print(f"Há {cont} linhas de texto em {entrada}")
+print(f"Há {cont} linhas de texto em {entrada} ")
