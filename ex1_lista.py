@@ -1,4 +1,5 @@
 """
+
 Exercício 1: Escreva uma função chamada corte que recebe uma lista e
 a modifica, removendo o primeiro e o último elemento, e retorna None.
 Depois escreva uma função chamada meio que recebe uma lista e retorna
