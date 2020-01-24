@@ -15,10 +15,10 @@ Digite o nome do arquivo: romeo.txt
 
 """
 
-arquivo = open('romeo.txt')
+arq = open('romeo.txt')
 lista_ordenada = []
 
-for linha in arquivo:
+for linha in arq:
     lista_palavras = linha.split()
     for palavra in lista_palavras:
         if palavra in lista_ordenada:
