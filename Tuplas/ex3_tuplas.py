@@ -21,17 +21,24 @@ except:
 import string
 aux = []
 letras = []
+d = dict()
 for linha in arquivo:
-    linha = linha.translate(str.maketrans('', '', string.punctuation))
-    linha = linha.translate(str.maketrans('', '', " "))
-    linha = linha.lower()
-    linha = linha.rstrip()
-    aux = list(linha)
-    letras.append(aux)
+    linha = linha.translate(str.maketrans('', '', string.punctuation)).translate(str.maketrans('', '', " ")).lower().rstrip()
 
-for letra in letras:
-    if letra.isDigit():
-        continue
-    print(letra)
+    for letra in linha:
+        if letra.isdigit():
+            continue
+        if letra not in d:
+            d[letra] = 1
+        else:
+            d[letra] += 1
+lista = []
+for chave, valor in list(d.items()):
+    lista.append((valor, chave))
+
+lista.sort(reverse=True)
+print(*lista)
+
+
 
 
