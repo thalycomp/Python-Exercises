@@ -22,8 +22,9 @@ import string
 aux = []
 letras = []
 d = dict()
+
 for linha in arquivo:
-    linha = linha.translate(str.maketrans('', '', string.punctuation)).translate(str.maketrans('', '', " ")).lower().rstrip()
+    linha = linha.translate(str.maketrans('', '', string.punctuation)).translate(str.maketrans('', '', " ")).lower().strip()
 
     for letra in linha:
         if letra.isdigit():
@@ -37,7 +38,9 @@ for chave, valor in list(d.items()):
     lista.append((valor, chave))
 
 lista.sort(reverse=True)
-print(*lista)
+
+for chave, valor in lista:
+    print(chave, valor)
 
 
 
