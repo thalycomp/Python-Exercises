@@ -6,7 +6,7 @@ que então possa extrair o nome do hospedeiro para que o soquete connect
 chame. Adicione tratamento de erro usando try e except para lidar com
 a condição do usuário digitar uma URL formatada incorretamente ou
 uma não existente
-https://pt.wikipedia.org/wiki/Casa
+
 """
 
 import socket
