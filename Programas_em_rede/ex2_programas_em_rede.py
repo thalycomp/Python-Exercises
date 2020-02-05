@@ -22,6 +22,7 @@ except:
     exit()
  
 cont = 0
+cont_total = 0
 while True:
 
     data = mysock.recv(512)
@@ -33,8 +34,10 @@ while True:
             print(d, end='')
             if d.isspace(): continue
             cont += 1
+        if d.isspace(): continue
+        cont_total +=1
 
 print('\n')
-print(f'{cont} caracteres')
+print(f'{cont_total} caracteres')
 
 mysock.close()
