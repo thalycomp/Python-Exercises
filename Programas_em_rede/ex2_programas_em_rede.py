@@ -31,10 +31,10 @@ while True:
     for d in data:
         if cont < 3000:
             print(d, end='')
+            if d.isspace(): continue
             cont += 1
 
-    #print(data.decode(),end='')
-
-print(f'\n {cont} caracteres')
+print('\n')
+print(f'{cont} caracteres')
 
 mysock.close()
