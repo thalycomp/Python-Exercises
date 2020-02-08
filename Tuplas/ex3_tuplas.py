@@ -24,10 +24,10 @@ letras = []
 d = dict()
 
 for linha in arquivo:
-    linha = linha.translate(str.maketrans('', '', string.punctuation)).translate(str.maketrans('', '', " ")).lower().strip()
+    linha = linha.translate(str.maketrans('', '', string.punctuation)).lower().strip()
 
     for letra in linha:
-        if letra.isdigit():
+        if letra.isdigit() or letra.isspace():
             continue
         if letra not in d:
             d[letra] = 1
